@@ -26,7 +26,7 @@
       }
     }
     
-    stage('package')
+    stage('package') {
       steps{
         script {
           sh 'echo "packaging stage"'
@@ -34,7 +34,7 @@
       }
     }
 
-    stage('Deploy')
+    stage('Deploy') {
       steps {
         script {
           sh 'echo "Deploy stage"'  
@@ -42,7 +42,7 @@
       }
     }
 
-    stage('Cleanup')
+    stage('Cleanup') {
       steps {
         CleanWS()
       }
