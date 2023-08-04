@@ -2,7 +2,7 @@
     agent any
 
   stages {
-    stage('initial cleanup') {
+    stage('initial cleanup'){
       steps{
         dir("$(WORKSPACE)") {
           deleteDir()
@@ -10,7 +10,7 @@
       }
     }
 
-    stage('Build') {
+    stage('Build'){
       steps {
         script {
           sh 'echo "Building Stage"'
@@ -18,7 +18,7 @@
       }
     }
 
-    stage('Test') {
+    stage('Test'){
       steps {
         script {
           sh 'echo "Testing Stage"'
@@ -26,7 +26,7 @@
       }
     }
     
-    stage('package') {
+    stage('package'){
       steps{
         script {
           sh 'echo "packaging stage"'
@@ -34,7 +34,7 @@
       }
     }
 
-    stage('Deploy') {
+    stage('Deploy'){
       steps {
         script {
           sh 'echo "Deploy stage"'  
@@ -42,7 +42,7 @@
       }
     }
 
-    stage('Cleanup') {
+    stage('Cleanup'){
       steps {
         CleanWS()
       }
